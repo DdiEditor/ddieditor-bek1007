@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Labels>
+    <!-- result-main.xsl -->
+    <Label id="systemInformationOther">
+        <LabelText xml:lang="da">Anden systeminformation</LabelText>
+        <LabelText xml:lang="en"></LabelText>
+    </Label>
+    <Label id="systemPurpose">
+        <LabelText xml:lang="da">It-systemets formål</LabelText>
+        <LabelText xml:lang="en"></LabelText>
+    </Label>
+    <Label id="systemPublication">
+        <LabelText xml:lang="da">Publikation af og om data</LabelText>
+        <LabelText xml:lang="en"></LabelText>
+    </Label>
+    <Label id="systemAgencyQualityControl">
+        <LabelText xml:lang="da">Myndighedens egen kvalitetskontrol</LabelText>
+        <LabelText xml:lang="en"></LabelText>
+    </Label>
+    <Label id="systemDataTransfer">
+        <LabelText xml:lang="da">Videregivelse af data</LabelText>
+        <LabelText xml:lang="en"></LabelText>
+    </Label>
+    <Label id="systemContent">
+        <LabelText xml:lang="da">It-systemets indhold -population og særlige begreber</LabelText>
+        <LabelText xml:lang="en"></LabelText>
+    </Label>
+    <Label id="systemRegulations">
+        <LabelText xml:lang="da">It-systemets lov- og regelgrundlag</LabelText>
+        <LabelText xml:lang="en"></LabelText>
+    </Label>
+    <Label id="systemAdministrativeFunctions">
+        <LabelText xml:lang="da">It-systemets administrative funktioner</LabelText>
+        <LabelText xml:lang="en"></LabelText>
+    </Label>
+    <Label id="systemPresentationStructure">
+        <LabelText xml:lang="da">It-systemets præsentationsstruktur</LabelText>
+        <LabelText xml:lang="en"></LabelText>
+    </Label>
+    <Label id="systemDataProvision">
+        <LabelText xml:lang="da">Tilvejebringelse af data</LabelText>
+        <LabelText xml:lang="en"></LabelText>
+    </Label>
+    <Label id="systemPreviousSubsequentFunctions">
+        <LabelText xml:lang="da">Data og funktioner fælles med forgænger- og efterfølgersystemer</LabelText>
+        <LabelText xml:lang="en"></LabelText>
+    </Label>
+    <Label id="operationalSystemInformation">
+        <LabelText xml:lang="da">Driftsversionens opbygning</LabelText>
+        <LabelText xml:lang="en"></LabelText>
+    </Label>
+    <Label id="operationalSystemConvertedInformation">
+        <LabelText xml:lang="da">Konvertering hos myndigheden</LabelText>
+        <LabelText xml:lang="en"></LabelText>
+    </Label>
+    <Label id="operationalSystemSOA">
+        <LabelText xml:lang="da">Dokumentation af sammensætning af data og eventuelle dokumenter fra flere forskellige it-systemer i en serviceorienteret arkitektur</LabelText>
+        <LabelText xml:lang="en"></LabelText>
+    </Label>
+    <Label id="operationalSystemInformationOther">
+        <LabelText xml:lang="da">Anden oprerationel systeminformation</LabelText>
+        <LabelText xml:lang="en"></LabelText>
+    </Label>
+    <Label id="archivalProvisions">
+        <LabelText xml:lang="da">Arkivets bestemmelser -herunder afleveringsbestemmelse</LabelText>
+        <LabelText xml:lang="en"></LabelText>
+    </Label>
+    <Label id="archivalMigrationInformation">
+        <LabelText xml:lang="da">Konvertering hos arkivet</LabelText>
+        <LabelText xml:lang="en"></LabelText>
+    </Label>
+    <Label id="archivalTransformationInformation">
+        <LabelText xml:lang="da">Dokumentation af konvertering fra driftsversion til arkiveringsversion</LabelText>
+        <LabelText xml:lang="en"></LabelText>
+    </Label>
+    <Label id="archivalInformationOther">
+        <LabelText xml:lang="da">Anden arkivinformation</LabelText>
+        <LabelText xml:lang="en"></LabelText>
+    </Label>
+    <Label id="archivistNotes">
+        <LabelText xml:lang="da">Arkivarnoter</LabelText>
+        <LabelText xml:lang="en"></LabelText>
+    </Label>
+    <Label id="archivalTestNotes">
+        <LabelText xml:lang="da">Testnoter</LabelText>
+        <LabelText xml:lang="en"></LabelText>
+    </Label>
+    <Label id="ingestInformation">
+        <LabelText xml:lang="da">Ingest information</LabelText>
+        <LabelText xml:lang="en"></LabelText>
+    </Label>
+    <Label id="informationOther">
+        <LabelText xml:lang="da">Anden information</LabelText>
+        <LabelText xml:lang="en"></LabelText>
+    </Label>
+    <Label id="">
+        <LabelText xml:lang="da"></LabelText>
+        <LabelText xml:lang="en"></LabelText>
+    </Label>
+</Labels>

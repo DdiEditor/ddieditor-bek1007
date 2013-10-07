@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="dk.dda.ddieditor.bek1007.perspective.Bek1007Perspective"
+            icon="icon/inheritable_filter.gif"
+            id="dk.dda.ddieditor.bek1007.perspective.Bek1007Perspective"
+            name="Bek. 1007">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="dk.dda.ddieditor.bek1007.view.SiardkView"
+            icon="icon/table.gif"
+            id="dk.dda.ddieditor.bek1007.view.SiardkView"
+            name="Siardk tables"
+            restorable="true">
+      </view>
+      <view
+            class="dk.dda.ddieditor.bek1007.view.TableView"
+            icon="icon/table.gif"
+            id="dk.dda.ddieditor.bek1007.view.TableView"
+            name="Table"
+            restorable="true">
+      </view>
+      <view
+            class="dk.dda.ddieditor.bek1007.view.Bek1007StudyDescriptionView"
+            icon="icon/removefromworkset.gif"
+            id="dk.dda.ddieditor.bek1007.view.Bek1007StudyDescriptionView"
+            name="Archive "
+            restorable="true">
+      </view>
+      <view
+            class="dk.dda.ddieditor.bek1007.view.Bek1007ContextDocumentationView"
+            icon="icon/fileType_filter.gif"
+            id="dk.dda.ddieditor.bek1007.view.Bek1007ContextDocumentationView"
+            name="Documents"
+            restorable="true">
+      </view>
+      <view
+            class="dk.dda.ddieditor.bek1007.view.TableRelationView"
+            icon="icon/table.gif"
+            id="dk.dda.ddieditor.bek1007.view.TableRelationView"
+            name="Table relations"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:toolsmenu?after=dk.dda.ddieditor.classification.command.CreateClassification">
+         <separator
+               name="ddieditor-siardk.separator1"
+               visible="true">
+         </separator>
+         <command
+               commandId="dk.dda.ddieditor.bek1007.command.OpenBek1007"
+               icon="icon/inheritable_filter.gif"
+               label="Open bek. 1007"
+               style="push">
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="dk.dda.ddieditor.bek1007.command.OpenBek1007"
+            id="dk.dda.ddieditor.bek1007.command.OpenBek1007"
+            name="Open Siardk">
+      </command>
+   </extension>
+
+</plugin>
