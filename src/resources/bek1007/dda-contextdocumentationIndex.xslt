@@ -8,6 +8,8 @@
 	<!-- params -->
 	<xsl:param name="avId">SA-Identifikation</xsl:param>
 	<xsl:param name="lang">da</xsl:param>
+	<xsl:param name="baselocation">/</xsl:param>
+	
 
 	<xsl:variable name="labels" select="document('labels.xml')/Labels/Label"/>
 	<xsl:template match="sa:contextDocumentationIndex">
@@ -29,11 +31,13 @@
 				</strong>
 				<h1>Dokumenter</h1>
 				<xsl:for-each select="sa:document">
+					<xsl:variable name="docId" select="sa:documentID"/>
 					<h2>
-						<xsl:value-of select="sa:documentID"/>
+						<xsl:value-of select="$docId"/>
 						<xsl:text>: </xsl:text>
 						<xsl:value-of select="sa:documentTitle"/>
 					</h2>
+					<button onclick="window.location.href='{$baselocation}/ContextDocumentation/docCollection1/{$docId}'">Hent dokument</button>
 					<xsl:if test="sa:documentDescription">
 						<p>
 							<strong>Beskrivelse: </strong>

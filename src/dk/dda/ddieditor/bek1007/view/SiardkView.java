@@ -25,6 +25,7 @@ import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.MenuItem;
@@ -42,6 +43,7 @@ import dk.dda.ddieditor.bek1007.model.SiardModel;
 import dk.dda.ddieditor.bek1007.osgi.Activator;
 import dk.dda.ddieditor.bek1007.perspective.Bek1007Perspective;
 import dk.dda.ddieditor.bek1007.util.ExportAsSpssSyntax;
+import dk.dda.ddieditor.bek1007.util.PdfUtil;
 import dk.sa.bek1007.siardk.TableType;
 
 public class SiardkView extends ViewPart implements IPropertyListener {
@@ -402,22 +404,16 @@ public class SiardkView extends ViewPart implements IPropertyListener {
 										.asyncExec(new Runnable() {
 											@Override
 											public void run() {
-												ExportAsSpssSyntax export = new ExportAsSpssSyntax();
 												try {
-													export.export(
-															dialog.path,
-															ModelStore
-																	.getInstance()
-																	.getSiardNameByTable(
-																			obj.getName()),
-															obj,
-															dialog.exportArchiveIndex);
-												} catch (
-														NoSuchAlgorithmException
-														| DDIFtpException
-														| XMLStreamException
-														| IOException
-														| XmlException e) {
+													// docs to pdf
+													for (String docId : dialog.docsSelected) {
+														new PdfUtil(
+																docId,
+																dialog.siardModel.getPath(),
+																dialog.path)
+																.export();
+													}
+												} catch (Exception e) {
 													Editor.showError(e, ID);
 												}
 											}

@@ -15,7 +15,6 @@ import dk.dda.ddieditor.bek1007.model.ModelStore;
 import dk.dda.ddieditor.bek1007.perspective.Bek1007Perspective;
 import dk.dda.ddieditor.bek1007.util.DotUtil;
 import dk.sa.bek1007.archive.ArchiveIndexDocument;
-import dk.sa.bek1007.context.ContextDocumentationIndexDocument;
 import dk.sa.bek1007.siardk.ColumnType;
 import dk.sa.bek1007.siardk.ForeignKeyType;
 
@@ -96,6 +95,7 @@ public class ViewUtil {
 			bek1007ContextInformationView.contextDocumentationFile = ModelStore
 					.getInstance().getContextDocumentationIndexFile(filePath);
 			bek1007ContextInformationView.changePartName(partName);
+			bek1007ContextInformationView.setBasePath(filePath);
 			bek1007ContextInformationView.init();
 		} catch (XmlException | WorkbenchException | IOException e) {
 			Editor.showError(e, "NA");

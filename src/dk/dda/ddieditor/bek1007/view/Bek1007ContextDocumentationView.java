@@ -34,6 +34,7 @@ public class Bek1007ContextDocumentationView extends ViewPart implements
 	File htmlFile = ViewUtil.getBlankHtmlFile();
 	Browser browser;
 	OpenBrowserListener openBrowserListener;
+	String basePath = "";
 
 	@Override
 	public void propertyChanged(Object source, int propId) {
@@ -69,6 +70,10 @@ public class Bek1007ContextDocumentationView extends ViewPart implements
 		setPartName(newName);
 	}
 
+	public void setBasePath(String basePath) {
+		this.basePath = basePath;
+	}
+
 	public void init() {
 		try {
 			if (htmlFile == null) {
@@ -79,6 +84,9 @@ public class Bek1007ContextDocumentationView extends ViewPart implements
 						.getContextDocumentationTransformer();
 				contextDocumentationTransformer.setParameter("avId",
 						getPartName());
+
+				contextDocumentationTransformer.setParameter("baselocation",
+						basePath);
 
 				// xslt transform
 				htmlFile = File.createTempFile("contextDocumentation", ".html");
