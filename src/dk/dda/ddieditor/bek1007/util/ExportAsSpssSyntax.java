@@ -65,7 +65,7 @@ public class ExportAsSpssSyntax {
 				"nchar varying" });
 
 		// integer
-		spssDataTypeToSql99DataType.put("F.0", new String[] { "integer", "int",
+		spssDataTypeToSql99DataType.put("F8 ", new String[] { "integer", "int",
 				"smallint" });
 
 		// numeric -plus: decimal digits and fractional digits
@@ -219,9 +219,10 @@ public class ExportAsSpssSyntax {
 		}
 
 		// write sps file
-		String csvPath = exportPath + File.separator + bek1007Id + "."
+		String csvPath = exportPath + File.separator + bek1007Id.replaceAll("\\.", "-") + "-"
 				+ table.getName() + ".csv";
-		writeOutSpssSyntax(exportPath, bek1007Id + "." + table.getName()
+		csvPath = csvPath.replaceAll("\\\\", "\\");
+		writeOutSpssSyntax(exportPath, bek1007Id.replaceAll("\\.", "-") + "-" + table.getName()
 				+ ".sps", csvPath);
 
 		// write csv file
@@ -276,7 +277,7 @@ public class ExportAsSpssSyntax {
 			}
 
 			// header
-			writer.write("*");			
+			writer.write("*.");			
 			writer.newLine();
 			writer.write("* "
 					+ Translator.formatIso8601DateTime(System
@@ -286,7 +287,7 @@ public class ExportAsSpssSyntax {
 					+ Platform.getBundle("ddieditor-bek1007").getHeaders()
 							.get("Bundle-Version") + ".");			
 			writer.newLine();
-			writer.write("*");			
+			writer.write("*.");			
 			writer.newLine();
 
 			// GET DATA
