@@ -77,6 +77,7 @@ public class TableDataUtil {
 		String coute = "\"";
 		String newLine = "\n";
 		String delimiter = ",";
+		String numericSperator = ".";
 
 		StringBuilder row = new StringBuilder();
 		String strValue = null;
@@ -103,6 +104,17 @@ public class TableDataUtil {
 				if (isColumn) {
 					// apply csv encoding rules
 					strValue = reader.getText().trim();
+
+					// recode
+					try {
+						Float.parseFloat(strValue);
+						// TODO use index instead
+						// int test = strValue.indexOf(numericSperator);
+						strValue = strValue.replace(numericSperator, delimiter);
+					} catch (NumberFormatException e) {
+						// do nothing
+					}
+
 					if (strValue.contains(delimiter)
 							|| strValue.contains(coute)
 							|| strValue.contains(newLine)) {
