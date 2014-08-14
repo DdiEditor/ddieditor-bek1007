@@ -69,7 +69,7 @@ public class ExportAsSpssSyntax {
 				"smallint" });
 
 		// numeric -plus: decimal digits and fractional digits
-		spssDataTypeToSql99DataType.put("F", new String[] { "numeric",
+		spssDataTypeToSql99DataType.put("F8.2", new String[] { "numeric",
 				"decimal", "dec", "float" });
 
 		// undefined number
@@ -304,6 +304,7 @@ public class ExportAsSpssSyntax {
 			writer.newLine();
 			writer.write(" /DELCASE=LINE");
 			writer.newLine();
+			// TODO read setting from prefs and this instead
 			writer.write(" /DELIMITERS=\",\"");
 			writer.newLine();
 			// SPSS: The text qualifier appears at both the beginning and end of
